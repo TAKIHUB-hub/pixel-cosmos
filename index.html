@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>PIXEL COSMOS — Infinite Real Estate</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Press+Start+2P&family=VT323&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="css/styles.css" />
+  </head>
+  <body>
+    <canvas id="world" aria-label="Infinite pixel space map"></canvas>
+    <div class="crt" aria-hidden="true"></div>
+
+    <header class="hud hud-top">
+      <div class="hud-panel brand">
+        <div class="logo-mark"></div>
+        <div>
+          <h1>PIXEL COSMOS</h1>
+          <p class="tag">INFINITE RETRO REAL ESTATE</p>
+        </div>
+      </div>
+      <div class="hud-panel coords" id="coords">
+        <span>X 00000</span>
+        <span>Y 00000</span>
+        <span>Z 1.00x</span>
+      </div>
+      <div class="hud-panel wallet" id="wallet">
+        <span class="label" id="pilot-label">PILOT</span>
+        <strong id="pilot-name">---</strong>
+        <span class="label">STARDUST</span>
+        <strong id="balance">0</strong>
+      </div>
+    </header>
+
+    <aside class="hud hud-left">
+      <button class="pixel-btn" id="btn-atlas" type="button">ATLAS</button>
+      <button class="pixel-btn" id="btn-codes" type="button">CODES</button>
+      <button class="pixel-btn" id="btn-account" type="button">ACCOUNT</button>
+      <button class="pixel-btn" id="btn-help" type="button">HELP</button>
+    </aside>
+
+    <aside class="hud hud-minimap">
+      <div class="minimap-frame">
+        <canvas id="minimap" width="164" height="164"></canvas>
+        <p>SECTOR SCAN</p>
+      </div>
+    </aside>
+
+    <p class="hint" id="hint">ZOOM INTO A PLANET TO LAND · SCROLL OUT TO RETURN TO SPACE</p>
+
+    <div id="surface-root" hidden>
+      <div class="surface-sky" aria-hidden="true"></div>
+      <div id="surface-stage"></div>
+      <p id="surface-banner"></p>
+    </div>
+
+    <div class="modal-root auth-root" id="auth-root">
+      <div class="modal-backdrop"></div>
+      <section class="modal pixel-panel" role="dialog" aria-modal="true" aria-labelledby="auth-title">
+        <div id="auth-body"></div>
+      </section>
+    </div>
+
+    <div class="modal-root" id="modal-root" hidden>
+      <div class="modal-backdrop" data-close="1"></div>
+      <section class="modal pixel-panel" id="modal" role="dialog" aria-modal="true">
+        <button class="modal-close" id="modal-close" type="button" aria-label="Close">×</button>
+        <div id="modal-body"></div>
+      </section>
+    </div>
+
+    <script type="module" src="js/main.js"></script>
+  </body>
+</html>
